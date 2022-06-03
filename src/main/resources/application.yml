@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: TransactionManager
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  jpa:
+    database: H2
+    driverClassName: org.h2.Driver
+    show-sql: true
+  datasource:
+    url: jdbc:h2:mem:database_user;DB_CLOSE_ON_EXIT=FALSE
+    username: SA
+    password:
+flyway:
+  locations: classpath:resources/db/migration
+  enabled: true
+
+info:
+  project:
+    name: ${project.name}
+    version: ${project.version}
+
+#management:
+#  endpoints:
+#    web:
+#      base-path: /
+#      exposure:
+#        include: env,metrics,health,info
