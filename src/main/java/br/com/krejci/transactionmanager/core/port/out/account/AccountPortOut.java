@@ -8,6 +8,8 @@ public interface AccountPortOut {
 
     public AccountModel save (AccountModel accountModel);
 
+    public AccountModel update (AccountModel accountModel);
+
     public Optional<AccountModel> findById(Long accountId);
 
     public Optional<AccountModel> findByDocumentNumber(Long documentNumber);

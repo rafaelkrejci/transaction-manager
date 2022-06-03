@@ -6,6 +6,6 @@ import lombok.Data;
 public class AccountModel {
 
     private Long documentNumber;
-
     private Long accountId;
+    private Integer limit;
 }

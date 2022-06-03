@@ -18,6 +18,9 @@ public class AccountEntity {
     @Column(name = "DOCUMENT_NUMBER", length = 30, nullable = false, unique = true)
     private Long documentNumber;
 
+    @Column(name = "AVALIABLE_CREDIT_LIMIT", nullable = false, unique = false)
+    private Integer limit;
+
     @Column(name = "REGISTRY_DATE", nullable = false, unique = false)
     @Temporal(value = TemporalType.TIMESTAMP)
     private Date registryDate;

@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface AccountPortIn {
 
-    public AccountModel createAccount(Long documentNumber);
+    public AccountModel createAccount(Long documentNumber, Integer limit);
 
     public Optional<AccountModel> findAccountById(Long id);
 

@@ -6,4 +6,5 @@ import lombok.Data;
 public class AccountRequestDTO {
 
     private Long account_number;
+    private Integer limit;
 }

@@ -8,6 +8,7 @@ public class AccountMapper {
         AccountDTO accountDTO = new AccountDTO();
         accountDTO.setDocument_number(accountModel.getDocumentNumber());
         accountDTO.setAccount_number(accountModel.getAccountId());
+        accountDTO.setLimit(accountModel.getLimit());
         return accountDTO;
     }
 }

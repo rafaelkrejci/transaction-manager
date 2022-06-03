@@ -14,13 +14,17 @@ public class AccountUseCase implements AccountPortIn {
     @Autowired
     private AccountPortOut accountPortOut;
 
-    public AccountModel createAccount(Long documentNumber){
+    public AccountModel createAccount(Long documentNumber, Integer limit){
 
         AccountModel account = new AccountModel();
         account.setDocumentNumber(documentNumber);
+        account.setLimit(limit);
         return accountPortOut.save(account);
     }
+    public AccountModel update(AccountModel accountModel){
 
+        return accountPortOut.update(accountModel);
+    }
     public Optional<AccountModel>  findAccountById(Long id){
 
         return accountPortOut.findById(id);

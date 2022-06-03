@@ -28,7 +28,7 @@ public class AccountController {
         }
 
         return ResponseEntity.status(HttpStatus.CREATED).
-                body(accountPort.createAccount(request.getAccount_number()).getAccountId().toString());
+                body(accountPort.createAccount(request.getAccount_number(), request.getLimit()).getAccountId().toString());
 
     }
 
